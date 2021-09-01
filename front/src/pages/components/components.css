@@ -29,16 +29,6 @@ font-family: 'Roboto', sans-serif;
 
 }
 
-.header__link{
-    width: 100px;
-    height: 25px;
-    font-size: 20px;
-    background-color: rgb(255, 255, 255);
-    padding: 26px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 .header__text{
     width:150px;
     text-decoration: none;
@@ -51,10 +41,23 @@ font-family: 'Roboto', sans-serif;
     background-color: #e7e7e7;  
 }
 
+.header__link{
+    font-weight: 500;
+    width: 100px;
+    height: 25px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 26px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .header__link-active{
+    font-weight: 500;
     font-size: 20px;
     background-color: #e7e7e7;
-    padding: 26px;
+    padding: 26px 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;  
@@ -130,9 +133,22 @@ font-family: 'Roboto', sans-serif;
 
 /* Товар */
 
-.lamp__picture{
+.lamp__header{
     height: 80%;
+    width: 100%;
+    max-height: 296px;
+    display: flex;
+    justify-content: center;
+    /* padding: 50% 0 35% 0; */
 }
+
+.lamp__picture{
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
 .lamp_footer{
     border-top: 1.5px solid rgb(184, 184, 184);
     height: 14%;
@@ -150,3 +166,65 @@ font-family: 'Roboto', sans-serif;
     font-weight: 600;  
     color: rgb(114, 114, 114);
 }
+
+
+/* SIGN UP */
+
+.signup-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sign-form__wrapper{
+    width: 80%;
+}
+
+.sign-form__title{
+    width: 100%;
+    font-weight: 600;
+    padding:25px 0px 5px 15px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.sign-form__item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.sign-form__plate{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #adadad9a;
+    border-radius: 5px;
+    box-shadow: 0  2px  5px rgba(0, 0, 0, 0.356);
+    margin: 15px;
+    padding:15px;
+}
+
+.sign-form__input-wrapper{
+    display: flex;
+    flex-direction: column; 
+}
+
+.sign-form__input{}
+
+.sign-form__text{}
+
+.{}
+
+.{}
+.{}
+.{}
+.{}
+.{}
+.{}
