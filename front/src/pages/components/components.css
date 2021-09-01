@@ -30,9 +30,21 @@ font-family: 'Roboto', sans-serif;
 }
 
 .header__link{
+    width: 100px;
+    height: 25px;
     font-size: 20px;
     background-color: rgb(255, 255, 255);
-    padding: 26px
+    padding: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.header__text{
+    width:150px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center; 
 }
 
 .header__link:hover{
@@ -42,26 +54,21 @@ font-family: 'Roboto', sans-serif;
 .header__link-active{
     font-size: 20px;
     background-color: #e7e7e7;
-    padding: 26px  
+    padding: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
 }
 
+
+
 .header__cart{
-    width: 22px;
-    padding: 0 10px 0 0 ; 
+    height: 25px;
+    width: 23px;
+    padding: 0 10px 0 0 ;  
     margin-bottom: -4px;   
 }
 
-/* .header__arrow{
-    position: absolute;
-    background-color: #e7e7e7;
-    /* border: 6px solid red; */
-    /* border-radius: 15px 15px 0px 0px; */
-    /* transform: rotate(-45deg);
-    width: 15px;
-    height: 38px;
-    margin: 0px 0px 10px 35px; 
-    box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.336);
-} */ */
 
 
 

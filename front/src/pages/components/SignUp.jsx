@@ -3,8 +3,8 @@ import './components.css';
 
 const SignUp = () => {
     return (
-        <div >SignUp</div>
+      <h2>Форма регистрации</h2>
     )
-};
+  };
 
 export default SignUp;
