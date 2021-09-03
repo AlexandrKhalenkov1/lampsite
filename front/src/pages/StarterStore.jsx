@@ -1,39 +1,45 @@
 import React, { useMemo } from 'react';
 import './components.css';
 import Lamps from './Lamps';
+import gold from '../images/Gold.png';
+import blueDesk from '../images/BlueDesk.png';
+import Header from './Header';
 
 const StarterStore = () => {
 
-  const lampsArr = useMemo(() => [{
+  const lampsArr = [{
     name: 'Gold',
-    price: '$300',
-    picture: 'no-picture:(',
+    price: '$243.00',
+    picture: gold,
     id: 1
   }, {
     name: 'Blue Desk',
-    price: '$300',
-    picture: 'no-picture:(',
+    price: '$150.00',
+    picture: blueDesk,
     id: 2
   }, {
     name: 'example',
-    price: '$300',
-    picture: 'no-picture:(',
+    price: '$300.00',
+    picture: gold,
     id: 3
   }, {
     name: 'example',
-    price: '$300',
-    picture: 'no-picture:(',
+    price: '$300.00',
+    picture: gold,
     id: 4
   }, {
     name: 'Completed',
-    price: '$300',
-    picture: 'no-picture:(',
+    price: '$300.00',
+    picture: gold,
     id: 5
   }
-], []);
-
+];
   return (
+
+    
+<div className="content-container">
     <div className="starterStore">
+ 
       <div className="starterStore__title">
           <div className="starterStore__title">
               I  
@@ -43,15 +49,12 @@ const StarterStore = () => {
             </div> 
       </div>
       <div className="starterStore__item">
-        {/* <Lamp tovarlamp={tovarlamp} name={name} price={price}/>
-        <Lamp tovarlamp={tovarlamp} name={name} price={price}/>
-        <Lamp tovarlamp={tovarlamp} name={name} price={price}/>
-        <Lamp tovarlamp={tovarlamp} name={name} price={price}/>
-        <Lamp tovarlamp={tovarlamp} name={name} price={price}/> */}
-        
-        <Lamps lampsArr={lampsArr}/>
+        <Lamps lampsArr={lampsArr} />
       </div>
     </div>
+
+</div>
+
   )
 };
 

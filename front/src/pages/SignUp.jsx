@@ -5,19 +5,18 @@ import './components.css';
 
 const SignUp = () =>{
   const validationSchema = yup.object().shape({
-    name: yup.string().typeError('must be string').required('&'),
-    password: yup.string().typeError('must be string').required('&'),
-    confirmPassword: yup.string().oneOf([yup.ref('password')], `Passwords didn't match`),
-    email: yup.string().email('Use correct email')
+    name: yup.string().typeError('must be string').required('Input your name'),
+    password: yup.string().typeError('must be string').required('Input correct password'),
+    email: yup.string().email('Input your email here, please use real email!')
   });
 
   return (
+    <div className="content-container">
     <div className="signup-form">
       <Formik
         initialValues={{ 
           name:'',
           password:'', 
-          confirmPassword:'', 
           email:''
         }}
         validateOnBlur
@@ -60,7 +59,7 @@ const SignUp = () =>{
 
                 <div className="sign-form__input-wrapper">
                   <label className="sign-form__text" htmlFor={`email`}>
-                    email
+                    Email
                   </label>
 
                   <input 
@@ -76,7 +75,7 @@ const SignUp = () =>{
 
                 <div className="sign-form__input-wrapper">
                   <label className="sign-form__text" htmlFor={`password`}>
-                    password
+                    Password
                   </label>
 
                   <input 
@@ -89,22 +88,6 @@ const SignUp = () =>{
                   />
                 </div>
                 { touched.password && errors.password && <p>{errors.password}</p>}
-
-                <div className="sign-form__input-wrapper">
-                  <label className="sign-form__text" htmlFor={`confirmPassword`}>
-                    Confirm password
-                  </label>
-
-                  <input 
-                    className="sign-form__input"
-                    type={`password`} 
-                    name={`confirmPassword`}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.confirmPassword}
-                  />
-                </div>
-                { touched.confirmPassword && errors.confirmPassword && <p>{errors.confirmPassword}</p>}
 
                 <button
                   className="sign-form__button"
@@ -120,6 +103,7 @@ const SignUp = () =>{
           )}
       </Formik>
     </div>
+  </div>
   )  
 };
 

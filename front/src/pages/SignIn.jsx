@@ -2,16 +2,17 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import './components.css';
+import Header from './Header';
 
 const SignIn = () =>{
   const validationSchema = yup.object().shape({
-    name: yup.string().typeError('must be string').required('&'),
-    password: yup.string().typeError('must be string').required('&'),
-    confirmPassword: yup.string().oneOf([yup.ref('password')], `Passwords didn't match`),
-    email: yup.string().email('Use correct email')
+    name: yup.string().typeError('must be string').required('Input your name'),
+    password: yup.string().typeError('must be string').required('Input correct password'),
+    email: yup.string().email('Input your email here, please use real email!')
   });
 
   return (
+    <div className="content-container">
     <div className="signup-form">
         <Formik
           initialValues={{ 
@@ -42,7 +43,7 @@ const SignIn = () =>{
               <div className="sign-form__plate"> 
                 <div className="sign-form__input-wrapper">
                   <label className="sign-form__text" htmlFor={`email`}>
-                    email
+                    Email
                   </label>
 
                   <input 
@@ -58,7 +59,7 @@ const SignIn = () =>{
 
                 <div className="sign-form__input-wrapper">
                   <label className="sign-form__text" htmlFor={`password`}>
-                    password
+                    Password
                   </label>
 
                   <input 
@@ -78,7 +79,7 @@ const SignIn = () =>{
                   onClick={handleSubmit}
                   type={`submit`}
                 >
-                  Register
+                  Login
                 </button>
               </div>    
             </div>
@@ -86,6 +87,7 @@ const SignIn = () =>{
           )}
       </Formik>
     </div>
+  </div>
   )  
 };
 

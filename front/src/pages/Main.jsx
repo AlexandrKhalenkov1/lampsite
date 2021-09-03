@@ -1,30 +1,22 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import starterStore from './components/StarterStore';
-import Header from './components/Header';
-import SignIn from './components/SignIn.jsx';
-import SignUp from './components/SignUp.jsx';
-import Cart from './components/Cart.jsx';
+import { createBrowserHistory } from 'history';
+import starterStore from './StarterStore';
+import Header from './Header';
+import SignIn from './SignIn.jsx';
+import SignUp from './SignUp.jsx';
+import Cart from './Cart'
+import Detail from './Details';
 
-const NotFound = () => {
-  return (
-    <h2>Ресурс не найден</h2>
-  )
-};
+const history = createBrowserHistory()
 
 const Main = () => {
     return (
       <div className="content-container">
-      <Router>
-         <Header/>
-          <Switch>
-              <Route exact path="/" component={starterStore} />
-              <Route  path="/SignUp" component={SignUp} />
-              <Route  path="/SignIn" component={SignIn} />
-              <Route  path="/Cart" component={Cart} />
-          </Switch>
-      </Router>
+        <Header/>
+        <div>
+            
+        </div>
     </div>
     )
 };

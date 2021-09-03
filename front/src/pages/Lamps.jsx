@@ -3,11 +3,10 @@ import Lamp from './Lamp';
 
 
 
-
 const Lamps = ({ lampsArr }) => lampsArr.map(({
     name, price, picture, id
   }) => (
-    <Lamp key={id} picture={picture} className="starterStore__goods" price={price} name={name} />
+    <Lamp key={id} id={id} picture={picture} className="starterStore__goods" price={price} name={name} />
   ));
 
 
