@@ -1,8 +1,10 @@
 import React from 'react';
 import gold from '../images/Gold.png';
+import Layout from '../components/layout';
 
-const Detail = ({lampName, amount, vendorcode}) => {
+const detail = ({ id, name, amount, vendorcode }) => {
     return(
+      <Layout>
         <div className="about">
         <div className="about-wrapper">
             <div className="about-container">
@@ -11,7 +13,7 @@ const Detail = ({lampName, amount, vendorcode}) => {
               </div>
               <div className="about__purchase">
                 <div className="about__name">
-                  {lampName}
+                  {name}
                 </div>
 
                 <div className="about__price">
@@ -41,7 +43,8 @@ const Detail = ({lampName, amount, vendorcode}) => {
             </div>  
         </div>  
       </div>
+    </Layout>
     )
 }
 
-export default Detail
+export default detail

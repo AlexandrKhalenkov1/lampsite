@@ -1,11 +1,13 @@
 import React from "react";
 import gold from '../images/Gold.png'
+import Layout from "../components/layout";
 
 const Cart = () => {
 
   const amount = '$243.00'
 
     return (
+    <Layout>
       <div className="content-container">
       <div className="cart-wrapper">
         <div className="cart__container">
@@ -44,6 +46,7 @@ const Cart = () => {
         </div>
       </div>
     </div>
+  </Layout>  
     )
   };
 

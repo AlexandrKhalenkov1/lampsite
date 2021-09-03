@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import './components.css';
+import Layout from "../components/layout";
 
 const SignUp = () =>{
   const validationSchema = yup.object().shape({
@@ -11,6 +12,7 @@ const SignUp = () =>{
   });
 
   return (
+  <Layout>
     <div className="content-container">
     <div className="signup-form">
       <Formik
@@ -104,6 +106,7 @@ const SignUp = () =>{
       </Formik>
     </div>
   </div>
+  </Layout>  
   )  
 };
 

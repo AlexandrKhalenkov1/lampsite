@@ -2,8 +2,8 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import './components.css';
-import Header from './Header';
-
+import Layout from "../components/layout";
+ 
 const SignIn = () =>{
   const validationSchema = yup.object().shape({
     name: yup.string().typeError('must be string').required('Input your name'),
@@ -12,6 +12,7 @@ const SignIn = () =>{
   });
 
   return (
+  <Layout>
     <div className="content-container">
     <div className="signup-form">
         <Formik
@@ -88,6 +89,7 @@ const SignIn = () =>{
       </Formik>
     </div>
   </div>
+</Layout> 
   )  
 };
 

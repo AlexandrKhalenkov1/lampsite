@@ -1,8 +1,8 @@
 import React from 'react';
-import Detail from './Detail';
+import detail from './detail_old';
 import gold from '../images/Gold.png';
 
-const Details = (name, price, picture) => {
+const details = (name, price, picture) => {
   const lampName = 'Blue Desk';
   const amount = '$243.00';
   const vendorcode = 'SKU:BLDE1000BLU';
@@ -47,4 +47,4 @@ const Details = (name, price, picture) => {
     </div>
   )
 };
-export default Details;
+export default details;

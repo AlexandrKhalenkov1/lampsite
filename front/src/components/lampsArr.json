@@ -1,0 +1,33 @@
+[
+    {
+    "name": "Gold",
+    "price": "$243.00",
+    "picture": "../images/Gold.png",
+    "id": 1
+},
+    {
+    "name": "Blue Desk",
+    "price": "$150.00",
+    "picture": "blueDesk",
+    "id": 2
+  }, 
+    {
+    "name": "example",
+    "price": "$300.00",
+    "picture": "gold",
+    "id": 3
+}, 
+  
+    {
+    "name": "example",
+    "price": "$300.00",
+    "picture": "gold",
+    "id": 4
+}, 
+    {
+    "name": "Completed",
+    "price": "$300.00",
+    "picture": "gold",
+    "id": 5
+  }
+]
