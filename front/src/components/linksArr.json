@@ -1,0 +1,36 @@
+[
+{
+    "id": 1,
+    "className": "header__icon",
+    "img": "../images/main-icon.png",
+    "href": "/starter-store",
+    "to": "/",
+    "text": "Starter Store",
+    "option": null
+  },{
+    "id": 2,
+    "className": "header__text",
+    "img": "",
+    "href": "/sign-up",
+    "to":"/sign-up",
+    "text": "Sign Up",
+    "option": null
+  },{
+    "id": 3,
+    "className": "header__text",
+    "img": "",
+    "href": "/sign-in",
+    "to":"/sign-in",
+    "text": "Sign In",
+    "option": null
+  },{
+    "id": 4,
+    "className": "header__cart",
+    "img": "../images/shoppingCart.png",
+    "href": "/cart",
+    "to":"/cart",
+    "text": "Cart",
+    "option": "goodsCount"
+  }
+  ] 
+  

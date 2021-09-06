@@ -490,6 +490,19 @@ a{
     min-width: 100px;
     background-color: #f2701d;
 }
+
+.purchase__button:active{
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    min-width: 100px;
+    background-color: #000000;
+}
+
+
 .about-footer{
 }
 .about-footer__title{

@@ -1,5 +1,5 @@
 import React from 'react';
-import detail from './detail_old';
+//import detail from './detail_old';
 import gold from '../images/Gold.png';
 
 const details = (name, price, picture) => {

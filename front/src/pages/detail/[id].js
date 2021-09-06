@@ -1,46 +1,52 @@
-import React from 'react';
-import gold from '../../images/Gold.png';
+import React, { useState, useEffect } from 'react';
 import Layout from '../../components/layout';
 import { lampsArr } from '../starter-store';
-import Lamp from '../Lamp';
+//import { lampsAddedToCart } from '../starter-store'
+
+//import { lampsAddedToCart } from '../starter-store';
+
+const Detail = ({ id, }) => {
+  const [goods, setGoods]= useState([]);
+ 
+  useEffect(() => {
+    const localgoods = JSON.parse(localStorage.getItem('goods'));
+    setGoods(localgoods || []);  
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('goods', JSON.stringify(goods));
+  }, [goods]);
+
+  useEffect(()=>{
+    console.log('Goods changes')
+  },[goods])
 
 
 
-const detail = ({ id, }) => {
+  const AddToCart = (e) => {
+    lampsArr.filter(function(item, i, array){
+      if(item.id === parseInt(itsid, 10)){
+        goods.push(item);
+      }
+    })
+    setGoods(goods);
+    localStorage.setItem('goods', JSON.stringify(goods));
+  }
 
+
+  //тут берем все параметры из массива по ид
   let currentLampProps = [];
   const itsid = id;
-    console.log('id',itsid);
-
-  lampsArr.forEach(function(item, i ){
-    if(i+=1 === itsid){
-      console.log(i)
-      currentLampProps.push(item) 
-    }
-    return currentLampProps;
+  lampsArr.filter(function(item, i ){
+    if(i === parseInt(itsid, 10)){
+      return currentLampProps.push(item)
+    };
   })
-
- let currprops = currentLampProps[0];
- console.log(currprops)
-
-
-let {name:name, price, picture, id: hisId} = currprops;
-
-
-// console.log(name);     
-// console.log(price);      
-// console.log(hisId);     
-// console.log(price);
-
-
-
-
+  let currprops = currentLampProps[0];
+  let { name:name, price, picture, vendorcode } = currprops;
+  
   return (
     <div>
-      {id}
-      {price}
-      {hisId}
-
       <Layout>
          <div className="about">
          <div className="about-wrapper">
@@ -57,12 +63,12 @@ let {name:name, price, picture, id: hisId} = currprops;
                    {price} 
                  </div>
                  <div className="about__vendorcode">
-                    vendorcode 
+                   {vendorcode} 
                  </div>
 
                  <div className="purchase__form">
                      <input className="purchase__input" type="number"  min="0" />
-                     <button className="purchase__button" type="submit">Add to Cart</button>
+                     <button className="purchase__button" type="submit" onClick={AddToCart}>Add to Cart</button>
                  </div>
 
                </div> 
@@ -81,18 +87,11 @@ let {name:name, price, picture, id: hisId} = currprops;
          </div>  
        </div>
      </Layout>
-
-
-
-
-
-
     </div>
   )
-  
 }
 
-export default detail
+export default Detail
 
 
 

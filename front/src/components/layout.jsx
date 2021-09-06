@@ -1,12 +1,18 @@
 import React from "react";
 
 import Header from "./header";
+import { TestProvider } from './MyContext' 
 
-export default ({ children }) => (
+
+export default ({ children }) => {
+  return(
   <>
-    <Header />
-    <div className="changable-content">
-      {children}
-    </div>
+    <TestProvider>
+      <Header />
+      <div className="changable-content" >
+        {children}
+      </div>
+    </TestProvider> 
   </>
-);
+  )
+};

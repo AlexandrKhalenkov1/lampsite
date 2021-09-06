@@ -7,13 +7,8 @@ const Lamp = ({
   name, className, price, picture, id, disabled = false
 }) => {
 
-  const detailFunc = (id) => {
-    //  window.location.replace("test",  id );
-    // alert( name);
-  }
-
 return (
-  <div  className={className} id={id} onClick={detailFunc}>
+  <div  className={className} id={id} >
     <a href={`detail/${id}`}  >  
       <div className="lamp__header">
         <div className="lamp__picture">
@@ -23,7 +18,7 @@ return (
 
       <div className="lamp_footer">
         <div className="lamp__name">{name}</div>
-        <div className="lamp__price">{price} {id}</div>  
+        <div className="lamp__price">{price} </div>  
       </div>
     </a>  
   </div>
