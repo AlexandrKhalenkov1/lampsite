@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import MyContext from './MyContext';
 
-const cartItem = ( { id, name, price,  picture,  vendorcode, removeTask }) => {
+const CartItem = ( { id, name, price,  picture, count }) => {
 
+  const myContext = useContext(MyContext);
+  const { 
+        lampsInCart,
+        deleteFromCart
+    } = myContext; 
     
   const deleteTask = (e) =>{
     e.preventDefault();
     const targetId = e.target.id;
-    removeTask(targetId);
+    deleteFromCart(targetId, lampsInCart)
   }
   
 
@@ -17,13 +23,17 @@ return (
             <img src={picture} alt="не подгрузився:(" className="goods__png"/>
             <div className="goods__info">
                 <div className="goods__name">{name}</div> 
-                <div className="goods__price">1x {price}</div> 
-                <div className="goods__moreInfo">See more information goes here...</div> 
+                <div className="goods__price">{count} x ${price}</div> 
+                <div className="goods__moreInfo">
+                  <a href={`/detail/${id}`} className="header__text" to={`/detail/${id}`}>
+                    See more information goes here...
+                  </a>
+                </div> 
             </div>
         </div>
         <div className="goods__item">
             <div className="goods__centrify">
-                <button className="goods__button" onClick={deleteTask}>
+                <button className="goods__button" id={id} onClick={deleteTask}>
                     <div className="cross" id={id}>&#10006;</div> 
                 </button> 
             </div>
@@ -33,4 +43,4 @@ return (
   )
 }
 
-export default cartItem
+export default CartItem

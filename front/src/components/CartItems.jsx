@@ -1,8 +1,8 @@
-import React, { memo } from 'react';
+import React from 'react';
 import CartItem from './CartItem';
 
-const cartItems =  ({ cartitems, amount, removeTask }) => cartitems.map(({ 
-    price, picture, id, vendorcode, name
+const cartItems =  ({ lampsInCart  }) => lampsInCart.map(({ 
+    price, picture, id, vendorcode, name, count
     }) => {
         
         return (
@@ -11,8 +11,8 @@ const cartItems =  ({ cartitems, amount, removeTask }) => cartitems.map(({
     key={id}
     name={name} price={price}  
     picture={picture}  
-    vendorcode={vendorcode} 
-    removeTask={removeTask}/>
+    vendorcode={vendorcode}
+    count={count} />
     )});
 
 export default cartItems;

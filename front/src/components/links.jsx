@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from './link'; 
-import { linksArr } from '../components/header';
 
-const Links = ({ linksArr  }) => linksArr.map(({
+const Links = ({ linksArr }) => linksArr.map(({
   id, className, img, href, to, text, option,
   }) => (
     <Link
